@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scale=no">
+	<title>test4 辅助类和响应式工具</title>
+	<link rel="stylesheet" href="../bootstrap-3.3.4/css/bootstrap.min.css">
+	<style type="text/css">
+	.a{
+		height:50px;
+		width: 100px;
+		border: 1px solid black;
+		background-color: #ccc;
+	}
+	</style>
+</head>
+<body style="margin: 10px; ">
+
+	文本颜色
+	<p class="text-muted">text-muted</p>
+	<p class="text-primary">text-primary</p>
+	<p class="text-success">text-success</p>
+	<p class="text-info">text-info</p>
+	<p class="text-warning">text-warning</p>
+	<p class="text-danger">text-danger</p>
+
+	<br>背景颜色
+	<p class="bg-primary">bg-primary</p>
+	<p class="bg-success">bg-success</p>
+	<p class="bg-info">bg-info</p>
+	<p class="bg-warning">bg-warning</p>
+	<p class="bg-danger">bg-danger</p>
+	
+	<br>关闭按钮<br>
+	<button class="close">&times;</button>
+
+	<br>三角符号<br>
+	<span class="caret"></span>
+
+	<br>快速浮动<br>
+	<div class="pull-left a">left</div>
+	<div class="pull-right a">right</div>
+
+	<br>区块居中<br>
+	<div class="center-block a">center-block</div>
+
+	<br>请除浮动<br>
+	<div class="pull-left a">left</div>左浮动
+	<div class="clearfix"></div> <!-- 请除浮动,如果没有这句，那么no-flow的背景会被浮动的left掩盖 -->
+	<div class="a">no-flow</div>
+	
+	<br>显示/隐藏<br>
+	<div class="show">show</div>
+	<div class="hidden">hidden</div>
+
+
+	<!-- 响应式工具 -->
+	<div class="visible-xs-inline a">超小屏激活显示</div>
+	<div class="hidden-xs a">超小屏激活隐藏</div>
+
+</body>
+</html>
