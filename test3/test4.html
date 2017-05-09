@@ -37,26 +37,76 @@
 	<br>三角符号<br>
 	<span class="caret"></span>
 
+	<hr style= "border: 1px solid red">
+
 	<br>快速浮动<br>
 	<div class="pull-left a">left</div>
 	<div class="pull-right a">right</div>
+	
+	<hr style= "border: 1px solid red">
 
-	<br>区块居中<br>
+	<br><br>区块居中<br>
 	<div class="center-block a">center-block</div>
+
+	<hr style= "border: 1px solid red">
 
 	<br>请除浮动<br>
 	<div class="pull-left a">left</div>左浮动
 	<div class="clearfix"></div> <!-- 请除浮动,如果没有这句，那么no-flow的背景会被浮动的left掩盖 -->
 	<div class="a">no-flow</div>
-	
+
+	<hr style= "border: 1px solid red">
+
 	<br>显示/隐藏<br>
 	<div class="show">show</div>
 	<div class="hidden">hidden</div>
 
 
-	<!-- 响应式工具 -->
+	<br><!-- 响应式工具 -->
 	<div class="visible-xs-inline a">超小屏激活显示</div>
 	<div class="hidden-xs a">超小屏激活隐藏</div>
 
+	<br><!-- 小图标组件 -->
+	<!-- 配合标签使用 -->
+	<i class="glyphicon glyphicon-star">star</i>
+	<span class="glyphicon glyphicon-heart">heart</span>
+	<!-- 配合按钮使用 -->
+	<button class="btn btn-default btn-lg">
+		<i class="glyphicon glyphicon-glass"></i>
+	</button>
+
+
+	<br><!-- 下拉菜单 -->
+	<div class="dropdown">  <!-- 加上open会默认显示下拉菜单选项的内容 -->
+		<button class="btn btn-default" data-toggle="dropdown">
+			下拉菜单
+			<span class="caret"></span> <!-- 三角符号：当dropdown换成dropup时候，三角符号箭头会向上 -->
+		</button>
+		<ul class="dropdown-menu"> <!-- dropdown-menu-right 设置对齐方式：下拉菜单显示在右边，默认是左边  -->
+			<li> <a href="#">首页</a></li>
+			<li> <a href="#">咨讯</a></li>
+			<li> <a href="#">产品</a></li>
+			<li> <a href="#">关于</a></li>
+		</ul>
+	</div>
+
+	<br><!-- 导航其他选项使用 -->
+	<div class="dropdown">  
+		<button class="btn btn-default" data-toggle="dropdown">
+			下拉菜单
+			<span class="caret"></span> 
+		</button>
+		<ul class="dropdown-menu">  
+			<li class="dropdown-header">网站导航</li> <!-- 设置菜单标题不加超链接 -->
+			<li> <a href="#">首页</a></li>
+			<li> <a href="#">咨讯</a></li>
+			<li class="divider"> <a href="#">产品</a></li><!--  设置菜单分割线 -->
+			<li class="disabled"> <a href="#">关于</a></li> <!-- 设置菜单禁用项 -->
+		</ul>
+	</div>
+
+
+	<script src="../bootstrap-3.3.4/js/jquery.min.js"></script>
+	<script src="../bootstrap-3.3.4/js/bootstrap.min.js"></script>
 </body>
 </html>

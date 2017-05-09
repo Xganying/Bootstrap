@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scale=no">
+	<title>test4 输入框和导航组件</title>
+	<link rel="stylesheet" href="../bootstrap-3.3.4/css/bootstrap.min.css">
+	<style type="text/css">
+	
+	</style>
+</head>
+<body style="margin: 10px; ">
+	
+	<!-- 输入框组件 -->
+	<!-- 左侧添加文字 -->
+	<div class="input-group">
+		<span class="input-group-addon">@</span>
+		<input type="text" class="form-control">
+	</div>
+	
+	<br><!-- 右侧添加文字 -->
+	<div class="input-group">
+		<input type="text" class="form-control">
+		<span class="input-group-addon">@</span>
+	</div>
+	
+	<br><!-- 两侧添加文字,并设置为最大号的输入框 -->
+	<div class="input-group input-group-lg">
+		<span class="input-group-addon">￥</span>
+		<input type="text" class="form-control">
+		<span class="input-group-addon">.00</span>
+	</div>
+
+	<br><!-- 加复选框 -->
+	<div class="input-group">
+		<span class="input-group-addon"><input type="checkbox"></span>
+		<input type="text" class="form-control">
+	</div>
+	<br><!-- 加单选框 -->
+	<div class="input-group">
+		<span class="input-group-addon"><input type="radio"></span>
+		<input type="text" class="form-control">
+	</div>
+
+	<br><!-- 使用按钮 -->
+	<div class="input-group">
+		<input class="form-control">
+		<span class="input-group-btn">
+			<button class="btn btn-default">提交</button>
+		</span>
+	</div>
+	
+	<br><!-- 右侧使用下拉菜单或分页式 -->
+	<div class="input-group">
+		<input ttype="text" class="form-control">
+			<div class="input-group-btn">  
+				<button class="btn btn-default" data-toggle="dropdown">
+					下拉菜单
+					<span class="caret"></span> 
+				</button>
+				<ul class="dropdown-menu">  
+					<li> <a href="#">首页</a></li>
+					<li> <a href="#">咨讯</a></li>
+					<li> <a href="#">产品</a></li>
+					<li> <a href="#">关于</a></li>
+				</ul>
+			</div>
+		</input>
+	</div>
+
+
+	<br><br><!-- 导航组件 -->
+	<!-- 基本导航 -->
+	<ul class="nav nav-tabs">
+		<li class="active"><a href="#">首页</a></li>
+		<li><a href="#">咨讯</a></li>
+		<li><a href="#">产品</a></li>
+		<li><a href="#">关于</a></li>
+	</ul>
+
+	<br><!-- 胶囊式导航 -->
+	<ul class="nav nav-pills">  <!-- 垂直胶囊式导航：加上 nav-stacked -->
+		<li class="active"><a href="#">首页</a></li>
+		<li><a href="#">咨讯</a></li>
+		<li><a href="#">产品</a></li>
+		<li><a href="#">关于</a></li>
+	</ul>
+
+	<!-- 两端对齐式导航 -->
+	<ul class="nav nav-tabs nav-justified">
+		<li class="active"><a href="#">首页</a></li>
+		<li><a href="#">咨讯</a></li>
+		<li><a href="#">产品</a></li>
+		<li class="disabled"><a href="#">关于</a></li>  <!-- disabled禁用选项 -->
+	</ul>
+
+	<br><!-- 带有下拉菜单的导航 -->
+	<ul class="nav nav-tabs">
+		<li class="active"><a href="#">首页</a></li>
+		<li><a href="#">咨讯</a></li>
+		<li><a href="#">产品</a></li>
+		<li class="dropdown">
+			<a href="#" data-toggle="dropdown">
+				下拉菜单<span class="caret"></span>
+			</a>
+			<ul class="dropdown-menu">  
+				<li> <a href="#">首页</a></li>
+				<li> <a href="#">咨讯</a></li>
+				<li> <a href="#">产品</a></li>
+				<li> <a href="#">关于</a></li>
+			</ul>
+		</li>
+		<li><a href="#">关于</a></li>
+	</ul>
+
+
+	<br><br><!-- 导航条组件 -->
+	 <!-- navbar-inverse 反转的样式（背景是黑色）-->
+	 <!-- navbar-fixed-top导航条固定在顶部，拉动滚动条是始终早顶部显示导航条， navbar-fixed-bottom固定在底部 -->
+	 <!-- navbar-static-top 静态导航，随着滚动条滚动，导航条会看不见 -->
+	<nav class="navbar navbar-default navbar-fixed-top"> 
+		<div class="container">
+			<!-- 基本导航条包含标题和列表 -->
+			<div class="navbar-header">
+				<a href="#" class="navbar-brand">标题</a>
+			</div>
+			<ul class="nav navbar-nav">  
+				<li class="active"> <a href="#">首页</a></li>
+				<li> <a href="#">咨讯</a></li>
+				<li> <a href="#">产品</a></li>
+				<li> <a href="#">关于</a></li>
+			</ul>
+
+			<!-- 导航条中使用按钮 -->
+			<button class="btn btn-default navbar-btn navbar-right">注册</button>
+
+			<!-- 导航条中使用表单 -->
+			<form class="navbar-form navbar-right"><!--  navbar-right 设置搜索框靠右显示 -->
+				<div class="input-group">
+					<input type="text" class="form-control">
+					<div class="input-group-btn">
+						<button class="btn btn-default">搜索</button>
+					</div>
+				</div>
+			</form>
+
+			<!-- 导航条中使用文本 -->
+				<button class="btn btn-default navbar-btn navbar-left">登录</button>
+			<p class="navbar-text">我是一段文字<a href="#" class="navbar-link">链接地址</a></p>
+		</div>
+	</nav>
+
+	<br><br><!-- 面包屑导航（路径组件） -->
+	<ol class="breadcrumb">
+		<li><a href="#">首页</a></li>
+		<li><a href="#">产品列表</a></li>
+		<li class="active">时尚春款新装</li>
+	</ol>
+
+	<br><!-- 分页组件 -->
+	<ul class="pagination pagination-lg"> <!-- 可设置的尺寸：lg ,默认，sm 和 xs -->
+		<li><a href="#">&laquo;</a></li>
+		<li class="active"><a href="#">1</a></li> <!-- 设置为首选项 -->
+		<li><a href="#">2</a></li>
+		<li><a href="#">3</a></li>
+		<li><a href="#">4</a></li>
+		<li class="disabled"><a href="#">5</a></li> <!-- 设置为禁用项 -->
+		<li><a href="#">&raquo;</a></li>
+	</ul>
+
+	<br><!-- 分页效果 -->
+	<ul class="pager"> <!-- 默认会自动居中显示 -->
+		<li><a href="#">上一页</a></li>
+		<li><a href="#">下一页</a></li>
+	</ul>
+	<br>
+	<ul class="pager"> <!-- 设置分页按钮对齐分页连接 -->
+		<li class="previous"><a href="#">上一页</a></li>
+		<li class="next"><a href="#">下一页</a></li>
+	</ul>
+
+
+	<br><br><!-- 标签组件 -->
+	<!-- 在文本后面带上标签, 标签的样式有6中：defualt,primary,success,info,warning,danger -->
+	<h3>标签<span class="label label-default">new</span></h3>
+
+
+	<br><br><!-- 徽章 -->
+	<a href="#">未读信息信息<span class="badge">10</span></a>
+	<br><!-- 按钮中使用徽章 -->
+	<button class="btn btn-success">
+		提交<span class="badge">5</span>
+	</button>
+	<br><!-- 激活状态自动切换色调 -->
+	<ul class="nav nav-pills">
+		<li><a href="active">首页<span class="badge">2</span></a></li>
+		<li><a href="">咨讯</a></li>
+	</ul>
+
+
+	<script src="../bootstrap-3.3.4/js/jquery.min.js"></script>
+	<script src="../bootstrap-3.3.4/js/bootstrap.min.js"></script>
+</body>
+</html>
