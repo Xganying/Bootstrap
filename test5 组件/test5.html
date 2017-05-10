@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scale=no">
+	<title>test5 巨幕页头缩略图和警告框</title>
+	<link rel="stylesheet" href="../bootstrap-3.3.4/css/bootstrap.min.css">
+</head>
+<body style="margin: 10px; ">
+	
+	<!-- 巨幕组件 -->
+	<!-- 在固定的范围内 -->
+	<div class="container">
+		<div class="jumbotron">
+			<h3>网站标题</h3>
+			<p>我是网站的详细介绍</p>
+			<p><a href="#" class="btn btn-default">快速进入</a></p>
+		</div>
+	</div>
+	
+	<br><!-- 100%全屏显示 -->
+	<div class="jumbotron">
+		<div class="container">
+			<h3>网站标题</h3>
+			<p>我是网站的详细介绍</p>
+			<p><a href="#" class="btn btn-default">快速进入</a></p>
+		</div>
+	</div>
+
+
+	<br><!-- 页头组件 -->
+	<div class="page-header">
+		<h1>大标题<small>小标题</small></h1>
+	</div>
+
+
+	<br><!-- 缩略图组件 -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 col-sm-4 col-xs-6">
+				<div class="thumbnail">
+					<img src="../images/1.jpg">
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-6">
+				<div class="thumbnail">
+					<img src="../images/1.jpg">
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-6">
+				<div class="thumbnail">
+					<img src="../images/1.jpg">
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-6">
+				<div class="thumbnail">
+					<img src="../images/1.jpg">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<br><!-- 添加文字介绍等内容 -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 col-sm-4 col-xs-6">
+				<div class="thumbnail">
+					<img src="../images/1.jpg">
+					<div class="caption">
+						<h3>萌萌哒小和尚</h3>
+						<p>关于这张图片的详情</p>
+						<p><a href="#" class="btn btn-default">快速进入</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-6">
+				<div class="thumbnail">
+					<img src="../images/1.jpg">
+					<div class="caption">
+						<h3>萌萌哒小和尚</h3>
+						<p>关于这张图片的详情</p>
+						<p><a href="#" class="btn btn-default">快速进入</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-6">
+				<div class="thumbnail">
+					<img src="../images/1.jpg">
+					<div class="caption">
+						<h3>萌萌哒小和尚</h3>
+						<p>关于这张图片的详情</p>
+						<p><a href="#" class="btn btn-default">快速进入</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-4 col-xs-6">
+				<div class="thumbnail">
+					<img src="../images/1.jpg">
+					<div class="caption">
+						<h3>萌萌哒小和尚</h3>
+						<p>关于这张图片的详情</p>
+						<p><a href="#" class="btn btn-default">快速进入</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<br><!-- 警告框组件(4种): alert-success, alert-info, alert-warning, alert-danger -->
+	<div class="alert alert-success">
+		这是一个成功的响应框
+		<button class="close" data-dismiss="alert"><span>&times;</span></button>
+	</div>
+	<div class="alert alert-warning">
+		这是一个警告的响应框,请下载<a href="#" class="alert-link">最新版本</a>
+		<button class="close" data-dismiss="alert"><span>&times;</span></button>
+	</div>
+
+	<br><!-- Well组件: 大小有lg和sm两种  -->
+	<div class="well well-lg">
+		内嵌组件
+	</div>
+	
+
+	<br><!-- 进度条组件 -->
+	<!-- 一般情况的进度条 -->
+	<div class="progress">
+		<div class="progress-bar" style="width:60%; ">60%</div>
+	</div>
+	<!-- 最低值进度条 -->
+	<div class="progress">
+		<div class="progress-bar" style="min-width:20px; ">0%</div>
+	</div>
+	<div class="progress">
+		<div class="progress-bar" style="min-width:20px; width:60%; ">60%</div>
+	</div>
+	<!-- 符合情景的进度条 -->
+	<div class="progress">
+		<div class="progress-bar progress-bar-success" style="min-width:20px; width:60%; ">60%</div>
+	</div>
+	<!-- 条纹状的进度条，IE10以上才支持 -->
+	<div class="progress">
+		<div class="progress-bar progress-bar-success progress-bar-striped" style="min-width:20px; width:60%; ">60%</div>
+	</div>
+	<!-- 带动画效果的进度条：前提必须是条纹状的 -->
+	<div class="progress">
+		<div class="progress-bar progress-bar-success progress-bar-striped active" style="min-width:20px; width:60%; ">60%</div>
+	</div>
+	<!-- 堆叠效果 -->
+	<div class="progress">
+		<div class="progress-bar progress-bar-danger progress-bar-striped active" style="min-width:20px; width:20%; ">20%</div>
+		<div class="progress">
+		<div class="progress-bar progress-bar-warning progress-bar-striped active" style="min-width:20px; width:40%; ">40%</div>
+		<div class="progress-bar progress-bar-success progress-bar-striped active" style="min-width:20px; width:40%; ">40%</div>
+	</div>
+
+
+	<br><br><br>
+
+	<script src="../bootstrap-3.3.4/js/jquery.min.js"></script>
+	<script src="../bootstrap-3.3.4/js/bootstrap.min.js"></script>
+</body>
+</html>

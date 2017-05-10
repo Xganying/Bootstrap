@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scale=no">
+	<title>模态框组件</title>
+	<link rel="stylesheet" href="../bootstrap-3.3.4/css/bootstrap.min.css">
+</head>
+<body style=" margin:10px; ">
+	
+	<!-- 模态框的声明 class="modal show" 显示模态框 fade淡入淡出效果-->
+	<div class="modal fade" id="myModal" tabindex="-1"> <!-- id:设置id定位, tabindex: 设置取消 -->
+		<!-- 模态框窗口的声明 -->
+		<div class="modal-dialog modal-lg"> <!-- modal-lg,sm 设置模态框大小 -->
+			<!-- 内容声明 -->
+			<div class="modal-content">
+				<!-- 模态框头部 -->
+				<div class="modal-header">
+					<!-- 关闭按钮（在没有show的情况下才能关闭） -->
+					<button class="close" data-dismiss="modal"><span>&times;</span></button> 
+					<h4 class="modal-title">会员登录</h4>
+				</div>
+				<!-- 模态框主体 -->
+				<div class="modal-body">
+					<!-- <p>暂时无法服务</p> -->
+					<!-- 在主体部分使用栅格系统中的流体 -->
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-sm-4">1</div>
+							<div class="col-sm-4">2</div>
+							<div class="col-sm-4">3</div>
+						</div>
+					</div>
+				</div>
+				<!-- 模态框注脚（默认居右）-->
+				<div class="modal-footer">
+					<button class="btn btn-default">注册</button>
+					<button class="btn btn-primary">登录</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 点击触发模态框  data-toggle：表明点击是一个模态框的弹窗类型，
+		data-target：定位到指定的模态框节点data-target可以换成href
+	 -->
+	<!-- <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">点击弹窗</button> -->
+	
+	<!-- jQuery方法 -->
+	<button class="btn btn-primary" id="btn">点击弹窗</button>
+
+
+
+	<br><br><br>
+
+	<script src="../bootstrap-3.3.4/js/jquery.min.js"></script>
+	<script src="../bootstrap-3.3.4/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript">
+
+		$'#btn').on('click', function(){
+			$('#myModal').modal('show');
+		});
+
+		$('#myModal').modal({
+			show: false
+		})
+
+	</script>
+
+
+</body>
+</html>
