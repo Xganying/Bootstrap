@@ -15,6 +15,14 @@ test2.html Bootstrap中的关于使用表格，按钮，表单，图片的练习
 ### test3
 test3.html Bootstrap中栅格系统使用练习，test4.html Bootstrap中辅助类，响应式工具，小图标和菜单按钮组件练习 
 
-### test4
+### test4组件
 
 test4.html 输入框和导航条的使用示例
+
+### test5组件
+
+包含Bootstrap的媒体对象组件，巨幕页头缩略图和警告框组件，列表组面板和嵌入组件组件的使用示例
+
+### test6插件
+
+Bootstrap中模态框，即弹出框插件的使用示例
