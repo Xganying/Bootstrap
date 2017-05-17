@@ -13,17 +13,26 @@
 </head>
 <body style=" margin:10px; ">
 	
+	<!-- 胶囊式 -->
 	<ul class="nav nav-pills">
 		<li class="active"><a href="#html" data-toggle="tab">HTML</a></li>
 		<li><a href="#css" data-toggle="tab">CSS</a></li>
 		<li><a href="#jquery" data-toggle="tab">jQuery</a></li>
 		<li><a href="#javascript" data-toggle="tab">JavaScript</a></li>
 	</ul>
+	<!-- 一般形式 --><br>
 	<ul class="nav nav-tabs">
 		<li class="active"><a href="#html" data-toggle="tab">HTML</a></li>
 		<li><a href="#css" data-toggle="tab">CSS</a></li>
 		<li><a href="#jquery" data-toggle="tab">jQuery</a></li>
 		<li><a href="#javascript" data-toggle="tab">JavaScript</a></li>
+	</ul>
+	<!-- 使用Javascript实现 --><br>
+	<ul class="nav nav-tabs" id="nav">
+		<li class="active"><a href="#html">HTML</a></li>
+		<li><a href="#css">CSS</a></li>
+		<li><a href="#jquery">jQuery</a></li>
+		<li><a href="#javascript" >JavaScript</a></li>
 	</ul>
 	
 	<div class="tab-content" style="padding:10px; ">
@@ -43,13 +52,89 @@
 	</div>
 
 
-	<br><br><br>
+	<!-- 工具提示插件 使用标签  -->
+	<!-- <a rel="tooltip" href="#" data-toggle="tooltip" data-original-title="说明文字，被titie覆盖了" title="<b>这是一个工具提示插件的使用</b>" data-animation="false" data-html="true" data-placement="auto left" data-trigger="hover focus"data-delay="100">工具提示插件1</a> -->
 
+
+	<!-- 通过javascript实现 --><br><br><br>
+	<!-- <div id="selection">
+		<a href="#" rel="tooltip" data-toggle="tooltip" title="<b>这是一个工具提示插件的使用</b>" >工具提示插件2</a>
+		<br><br><br>
+		<a href="#" data-toggle="tooltip" title="<b>这是一个工具提示插件的使用</b>">工具提示插件3</a>		
+	</div>
+ -->
+	
+	<!-- 一行完整显示提示的内容 --><br><br><br>
+	<!-- <div class="btn-group">
+		<button class="btn btn-default" data-toggle="tooltip" title="<b>这是一个工具提示插件的使用4</b>">左</button>
+		<button class="btn btn-default" data-toggle="tooltip" title="<b>这是一个工具提示插件的使用5</b>">中</button>
+		<button class="btn btn-default" data-toggle="tooltip" title="<b>这是一个工具提示插件的使用6</b>">右</button>
+	</div>
+ -->
+
+	<!-- 通过点击按钮出现提示，再次点击则关闭 --><br><br><br>
+	<a href="#" data-toggle="tooltip" title="<b>这是一个工具提示插件的使用7</b>">工具提示插件7</a>
+	<button class="btn btn-default">关闭按钮</button>
+
+
+
+
+
+	<br><br><br>
 	<script src="../bootstrap-3.3.4/js/jquery.min.js"></script>
 	<script src="../bootstrap-3.3.4/js/bootstrap.min.js"></script>
 
 	<script type="text/javascript">
 
+	//标签页   用过javascript实现点击出现相应内容
+	/*$('#nav a').on('click', function(e){
+		//e.preventDefalut(); //阻止默认行为
+		$(this).tab('show');
+	})
+	$('#nav a').on('show.bs.tab', function(){
+		alert('调用前触发！')
+	})
+	$('#nav a').on('shown.bs.tab', function(){
+		alert('调用完成后触发！')
+	})*/
+
+	//使用标签时候的工具提示插件
+	//$('a').tooltip()
+
+
+	//工具提示插件
+	/*$('#selection').tooltip({
+		deplay:{
+			show:1000,
+			hide:100
+		},
+		placement:'right',
+		selector: 'a[rel=tooltip]'
+	})*/
+
+
+	//在一行完整的显示提示的内容
+	/*$('button').tooltip({
+		deplay:{
+			show:1000,
+			hide:100
+		},
+		container: 'body'
+	})*/
+
+	// 通过点击按钮出现提示，再次点击则关闭
+	$('a').tooltip({
+		trigger ='click';
+	});
+	$('button').on('click', function(){
+		// $('a').tooltip('show'); //显示
+		//$('a').tooltip('hide')； //隐藏
+		// $('a').tooltip('toggle');  //反转
+		$('a').tooltip('destroy'); //销毁
+	})
+	$('a').on('show.bs.tooltip', function(){
+		alert('显示前触发！');
+	})
 
 	</script>
 
