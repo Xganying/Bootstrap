@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scale=no">
+	<title>弹出框和警告框插件</title>
+	<link rel="stylesheet" href="../bootstrap-3.3.4/css/bootstrap.min.css">
+	<style>
+	#view{
+		width:200px; 
+		height: 300px;
+		border: 1px solid blue;
+	}
+	</style>
+</head>
+
+<body style="margin:50px;">
+	
+	
+	<!-- 弹出框插件 -->
+	<div id="view">
+		<button id="btn1" class="btn btn-danger" data-toggle="popover" title="Bootstrap标题" data-content="Bootstrap，来自 Twitter，是目前很受欢迎的前端框架Bootstrap 是基于 HTML、CSS、JAVASCRIPT的，它简洁灵活，使得Web开发更加快捷." data-placement="right">显示/隐藏</button>
+	</div>
+	<button id="btn2" class"btn btn-default">点击</button>
+
+
+
+	<!-- 警告框插件 --><br><br><br>
+	<div class="alert alert-warning fade in">  <!-- fade in 淡入淡出效果 -->
+		<button class="close" data-dismiss="alert">
+			<span>&times;</span>
+		</button>
+		<p>警告1：您的浏览器不支持XX功能。</p>
+	</div>
+
+	<!-- 用javascript事件实现 -->
+	<div id="alert2" class="alert alert-warning fade in"> 
+		<button class="close" id="close2">
+			<span>&times;</span>
+		</button>
+		<p>警告2：您的浏览器不支持XX功能。</p>
+	</div>
+
+
+
+	<!-- 按钮插件 <--><br><br><br><br>
+	
+
+
+
+	<br><br><br>
+
+	<script src="../bootstrap-3.3.4/js/jquery.min.js"></script>
+	<script src="../bootstrap-3.3.4/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript">
+
+		//弹出框事件
+		$('#btn1').popover({ //初始化
+			//viewport:'#view'
+			viewport:{
+				selector:'#view',
+				padding:10
+			}
+		});
+
+		//popover插件中的事件
+		$("#btn1").on('show.bs.popover', function(){
+			alert("show事件");
+		});
+		$("#btn1").on('hide.bs.popover', function(){
+			alert("hide事件");
+		});
+
+		$("#btn2").on('click',function(){
+			// $('#btn1').popover('show'); // show, hide, toggle, destory
+			$('#btn1').popover('toggle');
+		});
+
+
+
+		// 警告框插件
+		$('#close2').on('click', function(){
+			$('#alert2').alert('close');
+		})
+		// alert事件
+		$('#alert2').on('close.bs.alert', function(){
+			alert('closed.')
+		})
+
+	
+	</script>
+
+</body>
+</html>

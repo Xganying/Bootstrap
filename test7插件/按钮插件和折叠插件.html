@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scale=no">
+	<title>弹出框和警告框插件</title>
+	<link rel="stylesheet" href="../bootstrap-3.3.4/css/bootstrap.min.css">
+	
+</head>
+
+<body style="margin:50px;">
+	
+
+	<!-- 按钮插件 -->
+
+	<!-- 选中状态,注：在 Firefox 多次页面加载时，按钮可能保持表单的禁用或选择状态。解决方案是：添加 autocomplete="off"。 -->
+	<button class="btn btn-primary"  data-toggle="button" autocomplete="off">按钮</button>	
+	<!-- 使用javascitpr实现 <--><br><br>
+	<button id="btn1" class="btn btn-primary" autocomplete="off">按钮2</button>
+
+	<!-- 单选按钮 --><br><br><br>
+	<div class="btn-group" data-toggle="buttons">
+		<label class="btn btn-primary active"> <!-- 默认选择 -->
+			<input type="radio" name="sex" value="男" checked>男
+		</label>
+		<label class="btn btn-primary">
+			<input type="radio" name="sex" value="女">女
+		</label>
+	</div>
+	<!-- 复选按钮 --><br><br>
+	<div class="btn-group" data-toggle="buttons">
+		<label class="btn btn-primary active"> <!-- 默认选择 -->
+			<input type="checkbox" name="subject" value="语文" checked>语文
+		</label>
+		<label class="btn btn-primary">
+			<input type="checkbox" name="subject" value="数学">数学
+		</label>
+		<label class="btn btn-primary "> <!-- 默认选择 -->
+			<input type="checkbox" name="subject" value="英语" >英语
+		</label>
+		<label class="btn btn-primary">
+			<input type="checkbox" name="subject" value="体育">体育
+		</label>
+	</div>
+
+	<!-- 加载状态（等待状态） --><br><br><br>
+	<!-- data后的loading这个字符串可以更改，如data-abc-text -->
+	<button id="btn2" class="btn btn-primary" data-loading-text="Loading...." autocomplete="off">开始上传</button> 
+	
+
+
+	<!-- 折叠插件 --><br><br><br>
+	<!-- 点击折叠/隐藏 -->
+	<button class="btn btn-primary" data-toggle="collapse" data-target="#content">显示/隐藏1</button>
+	<div class="collapse" id="content">
+		<div class="well">
+			Bootstrap，来自 Twitter，是目前很受欢迎的前端框架Bootstrap 是基于 HTML、CSS、JAVASCRIPT的，它简洁灵活，使得Web开发更加快捷.
+		</div>
+	</div>
+	<!-- javascript实现 --><br><br><br>
+	<button id="btn3" class="btn btn-primary" data-target="#content3">显示/隐藏2</button>
+	<div class="collapse" id="content3">
+		<div class="well">
+			Bootstrap，来自 Twitter，是目前很受欢迎的前端框架Bootstrap 是基于 HTML、CSS、JAVASCRIPT的，它简洁灵活，使得Web开发更加快捷.
+		</div>
+	</div>
+
+
+
+	<!-- 手风琴折叠 --><br><br><br>
+	<div class="panel-group" id="accordion">
+		<div class="panel panel-default"><!-- 第一个容器 -->
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a href="#collapse1" data-toggle="collapse" data-parent="#accordion">第一部分链接</a>
+				</h4>
+			</div>
+			<div id="collapse1" class="panel-collapse collapse" > <!-- 折叠菜单的部分collapse:开始时先隐藏 -->
+				<div class="panel-body">第一部分内容</div>
+			</div>
+		</div>
+
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a href="#collapse2" data-toggle="collapse" data-parent="#accordion">第二部分链接</a>
+				</h4>
+			</div>
+			<div id="collapse2" class="panel-collapse collapse" > 
+				<div class="panel-body">第一部分内容</div>
+			</div>
+		</div>
+	
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a href="#collapse3" data-toggle="collapse" data-parent="#accordion">第三部分链接</a>
+				</h4>
+			</div>
+			<div id="collapse3" class="panel-collapse collapse" >
+				<div class="panel-body">第三部分内容</div>
+			</div>
+		</div>
+	
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a href="#collapse4" data-toggle="collapse" data-parent="#accordion">第四部分链接</a>
+				</h4>
+			</div>
+			<div id="collapse4" class="panel-collapse collapse" >
+				<div class="panel-body">第四部分内容</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- 使用javascitpr实现手风琴折叠效果 -->	<br><br><br>
+	<div class="panel-group" id="accordion1">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a href="#collapse5" data-toggle="collapse">第一部分链接</a>
+				</h4>
+			</div>
+			<div id="collapse5" class="panel-collapse collapse" > 
+				<div class="panel-body">第一部分内容</div>
+			</div>
+		</div>
+
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a href="#collapse6" data-toggle="collapse">第二部分链接</a>
+				</h4>
+			</div>
+			<div id="collapse6" class="panel-collapse collapse" > 
+				<div class="panel-body">第一部分内容</div>
+			</div>
+		</div>
+	
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a href="#collapse7" data-toggle="collapse">第三部分链接</a>
+				</h4>
+			</div>
+			<div id="collapse7" class="panel-collapse collapse" >
+				<div class="panel-body">第三部分内容</div>
+			</div>
+		</div>
+	
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a href="#collapse8" data-toggle="collapse">第四部分链接</a>
+				</h4>
+			</div>
+			<div id="collapse8" class="panel-collapse collapse" >
+				<div class="panel-body">第四部分内容</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<br><br><br>
+	<script src="../bootstrap-3.3.4/js/jquery.min.js"></script>
+	<script src="../bootstrap-3.3.4/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript">
+
+		//按钮插件
+		$('#btn1').on('click', function(){
+			$(this).button('toggle');
+		})
+
+		$('#btn2').on('click', function(){
+			var btn = $(this).button('loading');
+			setTimeout(function(){
+				btn.button('reset')
+			},1000);
+		})
+
+		// 折叠效果
+		$('#btn3').on('click', function(){
+			$('#content3').collapse('toggle');
+			
+			/*$('#content3').collapse({
+				toggle:true
+			})
+			// 相当于：
+			$('#content3').collapse('show')*/
+		})
+		// collapse中的事件
+		$('#content3').on('show.bs.collapse', function(){
+			alert("调用show方法时触发")
+		});
+		$('#content3').on('shown.bs.collapse', function(){
+			alert("折叠区完全显示时触发")
+		});
+		$('#content3').on('hide.bs.collapse', function(){
+			alert("调用hide方法时触发")
+		});
+		$('#content3').on('hidden.bs.collapse', function(){
+			alert("折叠区完全隐藏之后触发")
+		});
+
+
+		//手风琴折叠效果
+		$('#collapse5, #collapse6, #collapse7, #collapse8').collapse({
+			parent:'#accordion1',
+			toggle:false
+		})
+		
+	</script>
+
+</body>
+</html>
