@@ -1,0 +1,13 @@
+/*about.css*/
+#about{
+	background-color: #eee;
+	padding: 40px 0;
+}
+#about a{
+	color:#0059b2;
+}
+
+#about .about{
+	background-color: #fff;
+	box-shadow: 2px 2px 3px #ccc;
+}

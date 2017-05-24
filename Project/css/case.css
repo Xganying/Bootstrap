@@ -1,0 +1,12 @@
+/*case.css*/
+#case{
+	padding: 40px 0;
+	background-color: #eee;
+	text-align: center;
+}
+#case h4{
+	color:#666;
+}
+#case p{
+	line-height: 1.6;
+}
